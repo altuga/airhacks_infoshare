@@ -15,6 +15,9 @@ public class PortRoyal {
     MetricRegistry registry;
 
     public void newPirate(Pirate pirate) {
+        if (pirate.destroyedShips < 3) {
+            throw new InvalidPirateException("Invalid pirate -> a joke " + pirate.destroyedShips);
+        }
         registry.counter("created.pirates").inc();
     }
 
