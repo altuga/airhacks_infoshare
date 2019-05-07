@@ -10,8 +10,8 @@ import com.airhacks.ping.entity.Pirate;
 public class UnstablePirateFactory {
 
     public Pirate create() {
-        throw new RuntimeException("no pirates today");
-        //return new Pirate("izydor", 13);
+        //throw new RuntimeException("no pirates today");
+        return new Pirate("izydor", 13);
     }
 
 

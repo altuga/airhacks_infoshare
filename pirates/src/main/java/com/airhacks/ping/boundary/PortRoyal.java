@@ -6,8 +6,6 @@ import com.airhacks.ping.entity.Pirate;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
-import org.eclipse.microprofile.faulttolerance.Fallback;
-import org.eclipse.microprofile.faulttolerance.Retry;
 import org.eclipse.microprofile.metrics.MetricRegistry;
 import org.eclipse.microprofile.metrics.annotation.RegistryType;
 
@@ -36,8 +34,6 @@ public class PortRoyal {
         registry.counter("created.pirates").inc();
     }
 
-    @Fallback(fallbackMethod = "defaultPirate")
-    @Retry(maxRetries = 3)
     public Pirate getNext() {
         System.out.println("retrying");
         return this.pirateFactory.create();
