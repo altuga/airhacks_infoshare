@@ -15,5 +15,9 @@ public class Pirate {
         this.destroyedShips = destroyedShips;
     }
 
+    public Pirate() {
+    }
+
+
 
 }
