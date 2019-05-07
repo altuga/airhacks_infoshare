@@ -8,7 +8,6 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.microprofile.metrics.annotation.Metered;
 
 /**
@@ -21,19 +20,11 @@ import org.eclipse.microprofile.metrics.annotation.Metered;
 public class PingResource {
 
     @Inject
-    @ConfigProperty(name = "message")
-    String message;    
-
-    @Inject
-    @ConfigProperty(name = "shipcount", defaultValue = "13")
-    int destroyedShips;
-
-    @Inject
     PortRoyal portRoyal;
 
     @GET
     public Pirate ping() {
-        return new Pirate(this.message + " destruction", this.destroyedShips);
+        return this.portRoyal.getNext();
     }
 
     @POST
