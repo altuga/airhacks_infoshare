@@ -17,4 +17,8 @@ https://github.com/adambien/spanee
 
 https://openjdk.java.net/projects/code-tools/jmh/
 
+https://github.com/adambien/docklands
+
+https://github.com/adambien/s2i-payara
+
 

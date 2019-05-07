@@ -1,2 +1,2 @@
-FROM airhacks/glassfish
+FROM airhacks/payara
 COPY ./target/pirates.war ${DEPLOYMENT_DIR}

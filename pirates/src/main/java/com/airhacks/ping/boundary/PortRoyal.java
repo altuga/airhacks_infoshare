@@ -17,7 +17,7 @@ public class PortRoyal {
     MetricRegistry registry;
 
     @Inject
-    @ConfigProperty(name = "message")
+    @ConfigProperty(name = "MESSAGE")
     String message;
 
     @Inject

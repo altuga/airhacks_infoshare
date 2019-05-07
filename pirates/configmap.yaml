@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pirates
+data:
+  hey: joe
+  message: "good morning"
